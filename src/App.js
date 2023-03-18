@@ -1,4 +1,4 @@
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
 
 function App() {
   const expenses = [
@@ -14,15 +14,10 @@ function App() {
     { id: 5, title: "New Car", amount: 195.37, date: new Date(23, 3, 23) },
   ];
 
-  let expense = expenses[parseInt(Math.random() * 5)];
   return (
     <div>
       <h1>My Todosss</h1>
-      <ExpenseItem
-        title={expense.title}
-        date={expense.date}
-        amount={expense.amount}
-      ></ExpenseItem>
+      <Expenses items={expenses} />
     </div>
   );
 }
